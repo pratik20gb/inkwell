@@ -1,4 +1,4 @@
-# Inkwell API
+# inkwell
 
 ![Java](https://img.shields.io/badge/Java-21-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-REST%20API-6DB33F)
@@ -22,8 +22,8 @@ A blog platform REST API built from scratch with Java and Spring Boot, then take
 **Requirements:** JDK 21 and Git. Maven is included through the project's wrapper.
 
 ```bash
-git clone https://github.com/pratik20gb/inkwell-api.git
-cd inkwell-api
+git clone https://github.com/pratik20gb/inkwell.git
+cd inkwell
 ```
 
 Run the app:
