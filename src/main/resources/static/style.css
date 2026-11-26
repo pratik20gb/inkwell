@@ -92,3 +92,16 @@ textarea {
 article p {
   margin-bottom: 20px;
 }
+
+/* Home page list: minimal white links on black */
+.post-link {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 0;
+  border-bottom: 1px solid #333333;
+}
+
+.post-link:hover {
+  text-decoration: underline;
+}

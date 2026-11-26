@@ -2,26 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inkwell</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Inkwell</h1>
-<form  id = "post-form">
+
+<form id="post-form">
     <div>
         <label for="title">Title</label>
         <input id="title" type="text">
-        <div id="title-error" style="color:red"></div>
+        <div id="title-error" style="color: #ff6b6b"></div>
     </div>
     <div>
         <label for="content">Content</label>
-        <textarea id="content" rows="5" cols="40"></textarea>
-        <div id="content-error" style="color:red"></div>
+        <textarea id="content" rows="5"></textarea>
+        <div id="content-error" style="color: #ff6b6b"></div>
     </div>
-    <button type="submit" id="submit-button">Publish</button>
-    <button type="button" id="cancel-button" hidden>Cancel</button>
+    <button type="submit">Publish</button>
 </form>
+
 <div id="posts"></div>
+
 <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inkwell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p><a href="/" style="color: #ffffff">← All posts</a></p>
+
+<article id="view" hidden>
+    <h2 id="post-title"></h2>
+    <p id="post-content"></p>
+    <button type="button" id="edit-button">Edit</button>
+    <button type="button" id="delete-button">Delete</button>
+</article>
+
+<form id="edit-form" hidden>
+    <div>
+        <label for="edit-title">Title</label>
+        <input id="edit-title" type="text">
+        <div id="title-error" style="color: #ff6b6b"></div>
+    </div>
+    <div>
+        <label for="edit-content">Content</label>
+        <textarea id="edit-content" rows="8"></textarea>
+        <div id="content-error" style="color: #ff6b6b"></div>
+    </div>
+    <button type="submit">Save changes</button>
+    <button type="button" id="cancel-button">Cancel</button>
+</form>
+
+<p id="message"></p>
+
+<script src="post.js"></script>
+</body>
+</html>
