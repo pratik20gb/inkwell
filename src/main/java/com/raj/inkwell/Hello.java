@@ -6,12 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Hello {
 
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Hello World!";
-    }
-
-    @GetMapping("/")
+    @GetMapping("/health")
     public String sayHello2() {
         return "anovid.lab";
     }
