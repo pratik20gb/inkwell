@@ -1,0 +1,94 @@
+/* Load the Sora font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap");
+
+/* Page: black background, white text, centred column */
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: "Sora", Arial, sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 16px;
+  line-height: 1.6;
+}
+
+/* Each post: white card with black text */
+article {
+  background: #ffffff;
+  color: #000000;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+article h2 {
+  margin-top: 0;
+}
+
+/* Form boxes: white boxes with black text */
+input,
+textarea {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+/* Default buttons (the form buttons, on the black page): white with black text */
+button {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Buttons inside a white post card: black with white text */
+article button {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+}
+
+article button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+/* Space between the form fields */
+form > div {
+  margin-bottom: 20px;
+}
+
+/* Labels sit above their boxes with a small gap */
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Space below the whole form, so it doesn't touch the posts */
+form {
+  margin-bottom: 40px;
+}
+
+/* Space between buttons */
+button {
+  margin-right: 8px;
+}
+
+/* Let the content box only be resized up and down */
+textarea {
+  resize: vertical;
+}
+
+/* A little space between the post text and its buttons */
+article p {
+  margin-bottom: 20px;
+}
