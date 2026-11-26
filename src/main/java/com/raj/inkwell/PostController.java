@@ -1,5 +1,6 @@
 package com.raj.inkwell;
 
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -37,7 +38,7 @@ public class PostController {
     }
 
     @PostMapping
-    public ResponseEntity<Post> createPost(@RequestBody CreatePostRequest request) {
+    public ResponseEntity<Post> createPost(@Valid @RequestBody CreatePostRequest request) {
         Post post = new Post(idCounter.incrementAndGet(),request.title(),request.content());
         posts.add(post);
         return ResponseEntity.status(HttpStatus.CREATED).body(post);
