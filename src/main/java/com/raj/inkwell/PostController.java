@@ -1,23 +1,24 @@
 package com.raj.inkwell;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 @RequestMapping("/api/posts")
 public class PostController {
     private final List<Post> posts = new ArrayList<>();
+    private final AtomicLong idCounter = new AtomicLong(2);
 
     public PostController() {
-        posts.add(new Post(1L, "My first post", "Hello, this is my first blog post.","raj"));
-        posts.add(new Post(2L, "first post", "this is my first post.","pratik"));
-        posts.add(new Post(3L,"second post by me","this is my second post.","raj"));
+        posts.add(new Post(1L, "My first post", "Hello, this is my first blog post."));
+        posts.add(new Post(2L, "first post", "this is my first post."));
+        posts.add(new Post(3L,"second post by me","this is my second post."));
 
     }
     @GetMapping
@@ -33,5 +34,12 @@ public class PostController {
             }
         }
         return ResponseEntity.notFound().build();
+    }
+
+    @PostMapping
+    public ResponseEntity<Post> createPost(@RequestBody CreatePostRequest request) {
+        Post post = new Post(idCounter.incrementAndGet(),request.title(),request.content());
+        posts.add(post);
+        return ResponseEntity.status(HttpStatus.CREATED).body(post);
     }
 }
